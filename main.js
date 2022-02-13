@@ -60,3 +60,15 @@
 // 6. Null
 
 // to declare a variable in JS,no need to specify what type of data it will hold (not like Scala)
+
+// Rules for naming variables:
+// var names begin w/ : a letter, $ or _ ;var names don't begin w/ a number;
+// don't use - or . in var names;
+// don't use keywords nor reserved words
+// vars are case sensitive
+// use a var name that describes the kind of info that var has
+// if var name has > 1 word, use lower letter for 1st word and capital 1st letter for each other word
+
+// indexes in array start at 0
+// get an element from array ---> use [] ---> eg. some_array[1]
+// number of items in an array ---> use the method .lenght
