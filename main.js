@@ -71,4 +71,8 @@
 
 // indexes in array start at 0
 // get an element from array ---> use [] ---> eg. some_array[1]
-// number of items in an array ---> use the method .lenght
+// number of items in an array ---> use the method length
+// Operators :
+// ---> Arithmetic:
+// + , -, /, *, ++ (like in C++), --, %
+// ----> String: 'a'+'b'= 'ab'; 2+'a'='2a'; 'a'*'b'=NaN;
