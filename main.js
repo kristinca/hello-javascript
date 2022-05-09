@@ -76,3 +76,42 @@
 // ---> Arithmetic:
 // + , -, /, *, ++ (like in C++), --, %
 // ----> String: 'a'+'b'= 'ab'; 2+'a'='2a'; 'a'*'b'=NaN;
+
+// Arrays
+// no need to specify number of elements when created 
+
+// Creating an array
+// var letters; letters = ['a', 'b', 'd'];
+// we can put any type of element in an array (like python)
+// array constructor : var letters = new Array ('a', 'b'); we use () brackets to get an element -> letters.item(1);
+// numbering items in an array: indexes start at 0 
+// accessing items in an array -> like python; someArray[elIndex]
+// number of items in an array -> theArray.length;
+// arrays are vars -> mutable 
+
+// Expressions
+// 1. expressions that assign a val to a var : var aaa = 'aaa'; data type: string
+// var aaa; -> data type: undefined
+// 2. expressions that use vars to return a single val: var a = 2*4;
+
+// Operators
+// Assignment operators : assign a value to a var : var a = 3;
+// Arithmetic operators : basic math: var v = 3*3;
+// String operators: combine strings like python '2' + '3' = '23';
+// Comparison operators: return true or false
+// Logical operators: combine expressions , return true or false: a = (2<3) && (4> 7);
+
+
+// Arithmetic Operators
+// 1. addition : 10 + 2 : res = 12 
+// 2. substraction : 10 -2 : res=8
+// 3. division : 10/2 = 5, 10/3 = 3.33333
+// 4. multiplication: 10*2 = 20, 1 * 2.2 = 2.2
+// 5. increment: like C++ , i = 10; i++; :i=11
+// 6. decrement: like C++, i =10; i--;  : i=9
+// 7. modulus : 10%2 = 0
+
+// Order of execution 
+// * or /, + or -, unless in ()
+// string * string = NaN
+// 
