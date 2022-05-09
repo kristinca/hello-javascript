@@ -114,4 +114,16 @@
 // Order of execution 
 // * or /, + or -, unless in ()
 // string * string = NaN
-// 
+
+
+// 3. Functions, Methods & Objects
+// name the function -> call it afterwards
+// anonymous functions -> don't have a name; like lambda in python 
+// declaring a function: function functionName (parameter1, parameter2) { return code block; }
+// immediately invoked function expressions (iffy)
+// anonymous func and iffy are used: 
+/* -- As an argument when a function is called to calculate a value for that function
+--  To assign the value of a property to an object
+--  In event handlers and listeners to perform a task when an event occurs
+-- To prevent conflicts between two scripts that might use the same variable names
+*/
