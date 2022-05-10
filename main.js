@@ -135,7 +135,7 @@
 // a var references a val stored in memory
 // more vars -> lot of memory taken -> slower program 
 
-// PROPERTIES are vars that are a part of an object
+// PROPERTIES are VARS that are a part of an object
 // properties : dict; key-value
 // HTML uses attribute names and values
 // CSS uses property names and values
@@ -148,4 +148,4 @@
 // Creating an object: LITERAL NOTATION
 // like objects in Scala -> a dict where the vals are vars and functions, like the testing properties in scala homework 
 // access an object -> w/ the [] or . : person['name'] or person.name
-
+// adding and removing properties : we add properties like adding key value in dict in python : var aa = {'a' :1}; aa.new_prop = new_value;
