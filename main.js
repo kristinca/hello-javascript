@@ -127,3 +127,25 @@
 --  In event handlers and listeners to perform a task when an event occurs
 -- To prevent conflicts between two scripts that might use the same variable names
 */
+
+// Variable Scope
+// local vars, global vars 
+
+// How Memory And Vars Work
+// a var references a val stored in memory
+// more vars -> lot of memory taken -> slower program 
+
+// PROPERTIES are vars that are a part of an object
+// properties : dict; key-value
+// HTML uses attribute names and values
+// CSS uses property names and values
+// In JS :
+/* -- vars have a name and we can assign them a val of a string, number or boolean
+-- each item in an array is a key-value pair because it has an index and a val
+-- named func have a name and a val 
+-- objects have a set of name-vals, the names are keys ,like dict
+
+// Creating an object: LITERAL NOTATION
+// like objects in Scala -> a dict where the vals are vars and functions, like the testing properties in scala homework 
+// access an object -> w/ the [] or . : person['name'] or person.name
+

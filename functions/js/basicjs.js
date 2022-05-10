@@ -1,6 +1,6 @@
 var msg = ' AAAAAAAAAAAA ';
 function updateMessage() {
 var el =  document.getElementById('message');
-el.textContent = msg; 
+el.textContent = msg;
 console.log(el);}
 updateMessage();
