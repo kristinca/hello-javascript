@@ -149,3 +149,93 @@
 // like objects in Scala -> a dict where the vals are vars and functions, like the testing properties in scala homework 
 // access an object -> w/ the [] or . : person['name'] or person.name
 // adding and removing properties : we add properties like adding key value in dict in python : var aa = {'a' :1}; aa.new_prop = new_value;
+
+// THIS
+// this is a keyword used inside functions and objects, it refers to the object in which the function operates
+
+// Browsers come with a set of BUILT-IN OBJECTS that represent things like the browser window and the current web page shown in that window 
+// we can access them w/ the dot notation
+// THREE groups of built-in objects:
+/*
+1. BROWSER OBJECT MODEL creates a model of the browser tab or window;
+-- the top obj is the window obj, its child ojbs -> the other browser features :
+
+
+        WINDOW (current browser window or tab)
+        |
+        |------DOCUMENT (current web page)
+        |------HISTORY (pages in web history)
+        |------LOCATION (url of current page)
+        |------NAVIGATOR (info bout browser)
+        |------SCREEN (device's display info)
+
+
+2. DOCUMENT OBJECT MODEL creates a model of the current web page;
+-- the top obj is the document obj, its child ojbs -> the other items on the page:
+
+        document
+           |
+         <html>
+           |
+      _____|____
+      |         |
+    <head>    <body>
+       |        |
+    <title>    <div>---attribute
+                |
+               <p>
+                |
+               text
+
+
+3. GLOBAL JAVASCRIPT OBJECTS do not creates a model:
+
+    --String
+    --Number
+    --Boolean
+    --Date
+    --Math
+    --Regex
+
+
+*/
+
+// 1. Browser Obj Model , the WINDOW obj
+/*
+some properties:
+
+window.innerHeight    --- Height of window (excluding browser chrome/user interface) (in pixels)
+window.innerWidth     --- Width of window (excluding browser chrome/user interface) (in pixels)
+window.pageXOffset    --- Distance document has been scrolled horizontally (in pixels)
+window.pageYOffset    --- Distance document has been scrolled vertically (in pixels)
+window.screenX        --- X-coordinate of pointer, relative to top left corner of screen (in pixels)
+window.screenY        --- Y-coordinate of pointer, relative to top left corner of screen (in pixels)
+window.location       --- Current URL of window object (or local file path)
+window.document       --- Reference to document object, which is used to represent the current page contained in window
+window.history        --- Reference to history object for browser window or tab, which contains details of the pages that have been viewed in that window or tab
+window.history.length --- Number of items in hi story object for browser window or tab
+window.screen         --- Reference to screen object
+window.screen.width   --- Accesses screen object and finds value of its width property (in pixels)
+window.screen.height  --- A ccesses screen object and finds value of its height property (in pixels)
+
+
+some methods:
+
+window.a1ert()  --- Creates dialog box with message (user must click OK button to close it)
+window.open()   --- Opens new browser window with URL specified as parameter
+window.print()  --- Tells browser that user wants to print contents of current page (acts like user has clicked a print option in the browser's user interface)
+
+*/
+
+// 2. DOM , the DOCUMENT obj
+/*
+some properties:
+
+document.title         --- Title of current document
+document.lastModified  --- Date on which document was last modified
+document.URL           --- Returns string containing URL of current document
+
+
+
+
+*/
