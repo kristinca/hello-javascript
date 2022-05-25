@@ -234,8 +234,31 @@ some properties:
 document.title         --- Title of current document
 document.lastModified  --- Date on which document was last modified
 document.URL           --- Returns string containing URL of current document
+document.domain        --- Returns domain of current document
 
+some methods:
 
+document.write()            --- Writes text to document
+document.getElementByld()   --- Returns element, if there is an element with the value of the id attribute that matches
+document.querySelectorAll() --- Returns list of elements that match a CSS selector, which is specified as a parameter
+document.createElement()    --- Creates new element
+document.createTextNode()   --- Creates new text node
 
+*/
+
+// 3. Global Objects: STRING obj
+/*
+
+some methods:
+
+toUpperCase()   --- Changes string to uppercase characters
+tolowerCase()   --- Changes string to lowercase characters
+charAt()        --- Takes an index number as a parameter, and returns the character found at that position
+indexOf()       --- Returns index number of the first time a character or set of characters is found within the string
+lastlndexOf()   --- Returns index number of the last time a character or set of characters is found within the string
+substring()     --- Returns characters found between two index numbers where the character for the first index number is included and the character for the last index number is not included
+split()         --- When a character is specified, it splits the string each time it is found, then stores each individual part ih an array
+trim()          --- Removes whitespace from start and end of string
+replace()       --- Like find and replace, it takes one value that should be found, and another to replace it (by default, it only replaces the first match it finds)
 
 */
