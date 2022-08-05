@@ -11,13 +11,14 @@ venv/
 
 # Database
 db.sqlite3
-semos_company_names.db
-
 
 # Static folder at project root
 /static/
 package-lock.json
 package.json
+/e6letsgo/public/
+e6letsgo/server/
+/index.html
 
 # macOS
 ._*
