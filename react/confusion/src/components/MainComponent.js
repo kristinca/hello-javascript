@@ -1,5 +1,8 @@
-import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+import Home from './HomeComponent';
+import { Routes, Route, Redirect, Switch } from 'react-router-dom';
 import { DISHES } from '../shared/dishes';
 import DishDetail from './DishDetailComponent';
 import { Component } from 'react';
@@ -10,31 +13,24 @@ class Main extends Component {
     super(props);
 
     this.state = {
-      dishes: DISHES,
-      selectedDish: null
+      dishes: DISHES
     };
   }
 
-
-  onDishSelect(dishId){
-
-    this.setState({
-        selectedDish: dishId
-    });
-
-    }
-
   render() {
+    const HomePage = () => {
+      return(
+        <Home />
+      );
+    }
   return (
     <div>
-      <Navbar dark color="primary">
-        <div className="container">
-        <NavbarBrand href="/">Restorante Con Fusion</NavbarBrand>
-        </div>
-      </Navbar>
-      <Menu dishes={this.state.dishes}
-      onClick={(dishId) => this.onDishSelect( dishId ) } />
-      <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />
+    <Header />
+    <Switch>
+      <Route path='/home' component={HomePage} />
+      <Route path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
+      </Switch>
+    <Footer />
     </div>
   );
 }
