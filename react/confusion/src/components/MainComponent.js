@@ -9,6 +9,7 @@ import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
 import { LEADERS } from '../shared/leaders';
 import DishDetail from './DishDetailComponent';
+import About from './AboutComponent';
 import { Component } from 'react';
 
 class Main extends Component {
@@ -40,6 +41,7 @@ class Main extends Component {
       );
     };
 
+
   return (
     <div>
     <Header />
@@ -48,6 +50,7 @@ class Main extends Component {
       <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
       <Route path='/menu/:dishId' component={DishWithId} />
       <Route exact path='/contactus' component={Contact} />
+      <Route exact path="/aboutus" component={() => <About leaders={this.state.leaders} />} />
       </Switch>
     <Footer />
     </div>
