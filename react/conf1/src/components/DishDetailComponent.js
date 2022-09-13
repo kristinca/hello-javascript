@@ -46,16 +46,11 @@ class CommentForm extends Component {
                 <Button outline onClick={this.toggleCommentFormModal}>
                     <span className="fa fa-comments fa-lg"></span> Submit Comment
                 </Button>
-
-
-                {/* commentform  Modal */}
                 <Modal isOpen={this.state.isCommentFormModalOpen} toggle={this.toggleCommentFormModal} >
                     <ModalHeader toggle={this.toggleCommentFormModal}> Submit Comment </ModalHeader>
                     <ModalBody>
 
                         <LocalForm onSubmit={(values) => this.handleCommentFormSubmit(values)}>
-
-                            {/* rating */}
                             <Row className="form-group">
                                 <Label htmlFor="rating" md={12} >Rating</Label>
                                 <Col md={12}>
@@ -84,9 +79,6 @@ class CommentForm extends Component {
                                     />
                                 </Col>
                             </Row>
-
-
-                            {/* author */}
                             <Row className="form-group">
                                 <Label htmlFor="author" md={12}> Your Name </Label>
                                 <Col md={12}>
@@ -109,11 +101,6 @@ class CommentForm extends Component {
                                     />
                                 </Col>
                             </Row>
-
-
-
-
-                            {/* comment */}
                             <Row className="form-group">
                                 <Label htmlFor="comment" md={12}>Comment</Label>
                                 <Col md={12}>
@@ -135,8 +122,6 @@ class CommentForm extends Component {
                                 </Col>
 
                             </Row>
-
-                            {/* submit button */}
                             <Row className="form-group">
                                 <Col>
                                     <Button type="submit" color="primary">
@@ -149,13 +134,10 @@ class CommentForm extends Component {
 
                     </ModalBody>
                 </Modal>
-
-
             </React.Fragment>
         );
     }
 }
-
     function RenderDish({dish}) {
             return (
                 <div className='col-12 col-md-5 m-1'>
