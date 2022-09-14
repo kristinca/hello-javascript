@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, CardBody,
     CardText, Button, Modal, ModalBody, ModalHeader, Label, Row, Col } from "reactstrap";
 import { Control, LocalForm, Errors } from 'react-redux-form';
-import Comment from './CommentFormComponent';
+
 
 
 const required = (val) => val && val.length; //value > 0
@@ -16,20 +16,12 @@ class CommentForm extends Component {
     constructor(props) {
         super(props);
 
-
-        this.state = {
-            isCommentFormModalOpen: false
-        };
-
         this.toggleCommentFormModal = this.toggleCommentFormModal.bind(this);
         this.handleCommentFormSubmit = this.handleCommentFormSubmit.bind(this);
-
-    }
-
-    handleCommentFormSubmit(values) {
-        console.log("Current State is: " + JSON.stringify(values));
-        alert("Current State is: " + JSON.stringify(values));
-
+        this.state = {
+            isNavOpen: false,
+            isCommentFormModalOpen: false
+        };
 
     }
 
@@ -37,6 +29,12 @@ class CommentForm extends Component {
         this.setState({
             isCommentFormModalOpen: !this.state.isCommentFormModalOpen
         });
+    }
+
+
+    handleCommentFormSubmit(values) {
+        this.toggleCommentFormModal.bind(this);
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
 
@@ -152,7 +150,7 @@ class CommentForm extends Component {
             );
     }
 
-    function RenderComments({comments}){
+    function RenderComments({comments, addComment, dishId}){
         if (comments != null)
             return (
                 <div className='col-12 col-md-5 m-1'>
@@ -174,7 +172,7 @@ class CommentForm extends Component {
                             );
                         })}
                     </ul>
-                    <Comment/>
+                    <CommentForm dishId={dishId} addComment={addComment}/>
                 </div>
             ); 
     }
@@ -200,7 +198,9 @@ class CommentForm extends Component {
                     <RenderDish dish={props.dish} />
                 </div>
                 <div className="col-12 col-md-5 m-1">
-                    <RenderComments comments={props.comments} />
+                    <RenderComments comments={props.comments}
+                    addComment={props.addComment}
+                    dishId={props.dish.id} />
                 </div>
             </div>
             </div>
