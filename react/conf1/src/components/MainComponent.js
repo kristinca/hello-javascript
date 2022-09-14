@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import DishDetail from './DishDetailComponent';
 import About from './AboutComponent';
 import { Component } from 'react';
-import { addComent } from '../redux/ActionCreators';
+import { addComment } from '../redux/ActionCreators';
 
 
 // map the redux state into props that will be available to the component
@@ -22,8 +22,8 @@ const mapStateToProps = state => {
   }   
 }
 
-const mapDispachToProps = (dispatch) => ({
-  addComent: (dishId, rating, author, comment) => dispatch(addComent(dishId, rating, author, comment))
+const mapDispachToProps = dispatch => ({
+  addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment))
 });
 
 class Main extends Component {
@@ -46,7 +46,7 @@ class Main extends Component {
       return(
           <DishDetail dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishId,10))[0]} 
             comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId,10))}
-            addComent={this.props.addComent} />
+            addComment={this.props.addComment} />
       );
     }
 
