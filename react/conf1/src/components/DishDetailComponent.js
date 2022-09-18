@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, CardBody,
     CardText, Button, Modal, ModalBody, ModalHeader, Label, Row, Col } from "reactstrap";
 import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Loading } from './LoadingComponent';
 
 
 
@@ -180,7 +181,25 @@ class CommentForm extends Component {
 
 
     const DishDetail = (props) => {
-        if (props.dish != null)
+        if (props.isLoading) {
+            return (
+                <div className="container">
+                    <div className="row">
+                        <Loading />
+                    </div>
+                </div>
+            );
+        }
+        else if (props.errMsg) {
+            return (
+                <div className="container">
+                    <div className="row">
+                        <h4>props.errMsg</h4>
+                    </div>
+                </div>
+            );
+        }
+        else if (props.dish != null)
         return (
             <div className="container">
             <div className="row">
