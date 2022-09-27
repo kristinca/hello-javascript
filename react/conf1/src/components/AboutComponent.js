@@ -1,6 +1,8 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, CardImg, CardTitle, CardText, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
+import { Loading } from './LoadingComponent';
 
 
 function RenderLeader({leader}) {
@@ -8,9 +10,9 @@ function RenderLeader({leader}) {
         <div key={leader.id} className="col-12 mt-5">
             <Media>
                 <Media left middle>
-                    <Media object src={leader.image} alt={leader.name} /></Media>
+                    <Media object src={baseUrl + leader.image} alt={leader.name} /></Media>
                 <Media body className="col-12">
-                {/* media-center  ---> I defined it in App.css ^^ */}
+
                 <Media heading class="media-center">{leader.name}
                 </Media>
                 <Media><p class="media-center">{leader.designation}</p>
@@ -23,15 +25,35 @@ function RenderLeader({leader}) {
 }
 
 
-function About(props) {
+const About = (props) => {
 
-    const leaders = props.leaders.map((leader) => {
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
             <RenderLeader leader={leader} />
         );
     });
+    
+    if (props.leaders.isLoading) {
 
-    return(
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+    else if (props.leaders.errMsg) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <h4>props.leaders.errMsg</h4>
+                </div>
+            </div>
+        );
+    }
+    else
+        return(
         <div className="container">
             <div className="row">
                 <Breadcrumb>

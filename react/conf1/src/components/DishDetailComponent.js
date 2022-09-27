@@ -4,6 +4,7 @@ import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem, C
     CardText, Button, Modal, ModalBody, ModalHeader, Label, Row, Col } from "reactstrap";
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 
 
 
@@ -142,7 +143,7 @@ class CommentForm extends Component {
             return (
                 <div className='col-12 col-md-5 m-1'>
                     <Card>
-                        <CardImg width="100%" src={dish.image} alt={dish.name} />
+                        <CardImg width="100%" src={baseUrl + dish.image} alt={dish.name} />
                         <CardBody>
                             <CardTitle> {dish.name}</CardTitle>
                             <CardText> {dish.description} </CardText>
