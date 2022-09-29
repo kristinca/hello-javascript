@@ -10,7 +10,7 @@ import About from './AboutComponent';
 import { Component } from 'react';
 import { postComment, fetchDishes, fetchComments, fetchPromos, fetchLeaders } from '../redux/ActionCreators';
 import { actions } from 'react-redux-form';
-
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // map the redux state into props that will be available to the component
 // the state is the state we get from redux store
@@ -78,6 +78,8 @@ class Main extends Component {
   return (
     <div>
     <Header />
+    <TransitionGroup>
+    <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
     <Switch>
       <Route path='/home' component={HomePage} />
       <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
@@ -85,6 +87,8 @@ class Main extends Component {
       <Route exact path='/contactus' component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} />} />
       <Route exact path="/aboutus" component={() => <About leaders={this.props.leaders} />} />
       </Switch>
+      </CSSTransition>
+      </TransitionGroup>
     <Footer />
     </div>
   );
